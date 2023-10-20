@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "pokemon";
+  src: url(./assets/fonts/Pokemon\ Solid.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.title {
+  -webkit-text-stroke: 1.2px blue;
+  font-family: pokemon;
+  font-size: 3rem;
+  color: yellow;
+  letter-spacing: 3px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pkm-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pkm-container:hover > .card_pokemon{
+    cursor: pointer;
+}
+
+.card_pokemon {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+  height: 200px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_pokemon.flipped{
+    transform: rotateY(180deg);
+}
+
+.container{
+    perspective: 50000px;
+}
+
+
+.front,
+.back{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+
+.card_pokemon img {
+  max-width: 100%;
+}
+
+p {
+  font-family: pokemon;
+  font-size: 1rem;
+  font-weight: light;
+  text-align: center;
+}
+
+

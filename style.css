@@ -25,8 +25,8 @@ body {
   gap: 10px;
 }
 
-.pkm-container:hover > .card_pokemon{
-    cursor: pointer;
+.pkm-container:hover > .card_pokemon {
+  cursor: pointer;
 }
 
 .card_pokemon {
@@ -44,25 +44,24 @@ body {
   justify-content: center;
 }
 
-.card_pokemon.flipped{
-    transform: rotateY(180deg);
+.card_pokemon.flipped {
+  transform: rotateY(180deg);
 }
 
-.container{
-    perspective: 50000px;
+.container {
+  perspective: 50000px;
 }
-
 
 .front,
-.back{
-    position: absolute;
-    backface-visibility: hidden;
+.back {
+  position: absolute;
+  backface-visibility: hidden;
 }
 
-.back{
-    transform: rotateY(180deg);
+.back {
+  transform: rotateY(180deg);
+  margin-bottom: 70px;
 }
-
 
 .card_pokemon img {
   max-width: 100%;
@@ -74,5 +73,3 @@ p {
   font-weight: light;
   text-align: center;
 }
-
-

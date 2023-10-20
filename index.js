@@ -1,3 +1,6 @@
+const btnNumber = document.querySelector(".btn_number");
+let number = "";
+
 async function fetchPokemonType(pokemonId) {
   const response = await fetch(
     `https://pokeapi.co/api/v2/pokemon-form/${pokemonId}/`
@@ -63,10 +66,10 @@ async function displayPokemons() {
     typeP.textContent = type;
     backDiv.appendChild(typeP);
 
-    const numberP = document.createElement('p')
+    const numberP = document.createElement("p");
     const number = await fetchPokemonNumber(i);
     numberP.textContent = number;
-    frontDiv.appendChild(numberP)
+    frontDiv.appendChild(numberP);
 
     cardPokemon.appendChild(frontDiv);
     cardPokemon.appendChild(backDiv);
